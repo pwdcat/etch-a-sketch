@@ -8,8 +8,7 @@ body{
 }
 
 .grid{
-    background-color: rgba(211, 211, 211, 0.363);
-    border: 1px solid black;
+    background-color: lightgray;
 }
 .row{
     width: 500px;

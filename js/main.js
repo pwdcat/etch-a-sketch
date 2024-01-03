@@ -27,12 +27,36 @@ function createGrid(size){
             div.style.height = `${px}px`;
             div.style.width = `${px}px`;
             div.addEventListener('mouseenter', ()=>{
-                div.style.backgroundColor = 'black';
+                if(!div.style.backgroundColor){
+                    div.style.backgroundColor = randomRGB(div.style.backgroundColor);
+                }
+                else{
+                    div.style.backgroundColor = darkening(div.style.backgroundColor);
+                }
             });
             row.appendChild(div);
         }
         container.appendChild(row);
     }
+}
+
+function randomRGB() {
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    
+    return `rgb(${red}, ${green}, ${blue})`;
+
+}
+
+function darkening(backgroundColor){
+    const rgbValues = backgroundColor.match(/\d+/g);
+
+    let red = parseInt(rgbValues[0], 10) * 0.9;
+    let green = parseInt(rgbValues[1], 10) * 0.9;
+    let blue = parseInt(rgbValues[2], 10) * 0.9;
+
+    return `rgb(${red}, ${green}, ${blue})`
 }
 
 
