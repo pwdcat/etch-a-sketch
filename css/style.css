@@ -3,15 +3,17 @@
     align-items: center;
     justify-content: center;
 }
+body{
+    flex-direction: column;
+}
 
 .grid{
-    height: 25px;
-    width: 25px;
     background-color: rgba(211, 211, 211, 0.363);
     border: 1px solid black;
 }
 .row{
-    display:flex;
+    width: 500px;
+    display: flex;
 }
 #container{
     display:flex;
