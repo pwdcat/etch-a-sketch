@@ -59,5 +59,6 @@ function darkening(backgroundColor){
     return `rgb(${red}, ${green}, ${blue})`
 }
 
+document.getElementById("footer").textContent = "Copyright © " + new Date().getFullYear() + " pwdcat";
 
 
